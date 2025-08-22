@@ -12,6 +12,15 @@ Pretrained model will be found in the 30 lines of [CLIP/clip/clip.py](https://gi
 
 You should copy ViT-B-32.pt to this dir.
 
+### Model Parameters
+| Parameter          | Value           |
+|--------------------|-----------------|
+| Training Epochs    | 100             |
+| Batch Size         | 128             |
+| Initial Learning Rate | 0.001          |
+| Weight Decay       | 0.2             |
+| Warmup Ratio       | 0.1             |
+
 ### Start
 
 After the dataset has been prepared, we could run the follow command to train.
