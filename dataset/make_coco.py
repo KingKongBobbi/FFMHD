@@ -158,9 +158,9 @@ if __name__ == "__main__":
     captions = {"caption": captionList}
     categorys = {"category": categoryList}
 
-    scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/coco/index.mat", indexs)
-    scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/coco/caption.mat", captions)
-    scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/coco/label.mat", categorys)
+    scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/coco/index.mat", indexs)
+    scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/coco/caption.mat", captions)
+    scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/coco/label.mat", categorys)
 
 
 
