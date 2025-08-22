@@ -6,7 +6,7 @@ import numpy as np
 # mkdir mat
 # mv make_mirflickr25k.py mat
 # python make_mirflickr25k.py
-root_dir = "/home/wangg/DSPH-main/DSPH-main/dataset/"
+root_dir = "/home/users/DSPH-main/DSPH-main/dataset/"
 
 file_path = os.path.join(root_dir, "mirflickr25k_annotations_v080")
 
@@ -72,9 +72,9 @@ for item in keys:
 print("captions created:", len(captions))
 captions = {"caption": captions}
 
-scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/index.mat", index)
-scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/caption.mat", captions)
-scio.savemat("/home/wangg/DSPH-main/DSPH-main/dataset/label.mat", labels)
+scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/index.mat", index)
+scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/caption.mat", captions)
+scio.savemat("/home/users/DSPH-main/DSPH-main/dataset/label.mat", labels)
 
 
 
