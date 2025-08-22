@@ -7,7 +7,7 @@ import numpy as np
 # mkdir mat
 # mv make_nuswide.py mat
 # python make_nuswide.py
-root_dir = "/home/wangg/DataSet/NUS-WIDE"
+root_dir = "/home/users/DataSet/NUS-WIDE"
 
 
 imageListFile = os.path.join(root_dir, "ImageList", "Imagelist.txt")
@@ -16,7 +16,7 @@ textFile = os.path.join(root_dir, "NUS_WID_Tags", "All_Tags.txt")
 classIndexFile = os.path.join(root_dir, "ConceptsList", "Concepts81.txt")
 
 # you can use the image urls to download images
-imagePath = os.path.join("/home/wangg/DataSet/NUS-WIDE/Flickr")
+imagePath = os.path.join("/home/users/DataSet/NUS-WIDE/Flickr")
 
 with open(imageListFile, "r") as f:
     indexs = f.readlines()
@@ -48,7 +48,7 @@ print("captions length:", len(captions))
 
 #labels = np.zeros([len(indexs), len(class_index)], dtype=np.int8)
 # label_lists = os.listdir(labelPath)
-with open("/home/wangg/DSPH-main/DSPH-main/dataset/used_label.txt", encoding='utf-8') as f:
+with open("/home/users/DSPH-main/DSPH-main/dataset/used_label.txt", encoding='utf-8') as f:
     label_lists = f.readlines()
 label_lists = [item.strip() for item in label_lists]
 
@@ -69,7 +69,7 @@ for item in label_lists:
 print("labels sum:", labels.sum())
 
 not_used_id = []
-with open("/home/wangg/DSPH-main/DSPH-main/dataset/not-used-id.txt", encoding='utf-8') as f:
+with open("/home/users/DSPH-main/DSPH-main/dataset/not-used-id.txt", encoding='utf-8') as f:
     not_used_id = f.readlines()
 not_used_id = [int(int(item.strip())-2) for item in not_used_id]
 
@@ -96,14 +96,14 @@ indexs = {"index": indexs}
 captions = {"caption": captions}
 labels = {"category": labels}
 
-scio.savemat('/home/wangg/DSPH-main/DSPH-main/dataset/nuswide/index.mat', indexs)
+scio.savemat('/home/users/DSPH-main/DSPH-main/dataset/nuswide/index.mat', indexs)
 # scio.savemat("caption.mat", captions)
-scio.savemat('/home/wangg/DSPH-main/DSPH-main/dataset/nuswide/label.mat', labels)
+scio.savemat('/home/users/DSPH-main/DSPH-main/dataset/nuswide/label.mat', labels)
 
 
 captions = [item + "\n" for item in captions["caption"]]
 
-with open('/home/wangg/DSPH-main/DSPH-main/dataset/nuswide/caption.txt', "w", encoding='utf-8') as f:
+with open('/home/users/DSPH-main/DSPH-main/dataset/nuswide/caption.txt', "w", encoding='utf-8') as f:
     f.writelines(captions)
 
 print("finished!")
